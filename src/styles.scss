@@ -1,22 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 :root {
-	--fontFamily1: "Poppins", sans-serif;
-	--fontFamily2: "Open Sans", sans-serif;
-	--mainColor: #376793; // --optionalColor: #3e6990;
-	--optionalColor: #5989b6;
-	--purpleColor: #493b76;
-	--yellowColor: #efda20;
-	--greenColor: #3b7d49;
-	--redColor: #e83a3a;
-	--greyColor: #cccccc;
-	--whiteColor: #ffffff;
-	--blackColor: #181b22;
-	--darkiColor: #090a0e;
-	--paragraphColor: #727695;
-	--fontSize: 15px;
-	--transition: 0.4s;
-  }
+    --fontFamily1: "Poppins", sans-serif;
+    --fontFamily2: "Open Sans", sans-serif;
+    --mainColor: #376793; // --optionalColor: #3e6990;
+    --optionalColor: #5989b6;
+    --purpleColor: #493b76;
+    --yellowColor: #efda20;
+    --greenColor: #3b7d49;
+    --redColor: #e83a3a;
+    --greyColor: #cccccc;
+    --whiteColor: #ffffff;
+    --blackColor: #181b22;
+    --darkiColor: #090a0e;
+    --paragraphColor: #727695;
+    --indigoColor: #3f51b5;
+    --fontSize: 15px;
+    --transition: 0.4s;
+}
+
+.bg-indigo {
+    background-color: var(--indigoColor);
+}
+
+.text-indigo {
+    color: var(--indigoColor);
+}

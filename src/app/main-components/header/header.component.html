@@ -1,1 +1,20 @@
-<p>header works!</p>
+<div>
+	<mat-toolbar color="primary">
+		<button mat-icon-button [matMenuTriggerFor]="menu" class="example-icon"
+			aria-label="Example icon-button with menu icon">
+			<mat-icon>menu</mat-icon>
+		</button>
+		<mat-menu #menu="matMenu">
+			<button mat-menu-item><a routerLink="/create/template">Template Form</a></button>
+			<button mat-menu-item><a routerLink="/create/reactive">Reactive Form</a></button>
+		</mat-menu>
+		<span><a routerLink="" class="text-white dec-none">My App</a></span>
+		<span class="example-spacer"></span>
+		<button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+			<mat-icon>favorite</mat-icon>
+		</button>
+		<button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+			<mat-icon>share</mat-icon>
+		</button>
+	</mat-toolbar>
+</div>

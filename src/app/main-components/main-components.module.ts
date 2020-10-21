@@ -5,6 +5,8 @@ import { MainComponentsRoutingModule } from './main-components-routing.module';
 import { LandingComponent } from './landing/landing.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { MaterialModule } from '../shared/material/material.module';
+import { FoodieBlogRoutingModule } from '../foodie-blog/foodie-blog-routing.module';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     CommonModule,
-    MainComponentsRoutingModule
+    MainComponentsRoutingModule,
+    FoodieBlogRoutingModule,
+    MaterialModule
   ],
   exports: [
     LandingComponent,
