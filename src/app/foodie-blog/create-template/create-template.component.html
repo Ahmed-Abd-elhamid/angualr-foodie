@@ -1,0 +1,85 @@
+<div class="container">
+	<div class="row justify-content-center p-3 m-4 border rounded shadow">
+		<div class="col-sm-12 col-md-6 border-right">
+			<h1 class="p-1 text-center bg-warning rounded shadow bold">Add New Dish</h1>
+			<hr>
+			<form action="post" (ngSubmit)="createDish(dishForm)" #dishForm="ngForm">
+				<div class="p-2">
+					<mat-form-field appearance="fill">
+						<mat-label>Dish name</mat-label>
+						<input matInput name="name" #name="ngModel" [(ngModel)]="dish.name" placeholder="Name" required>
+						<mat-hint>Hint</mat-hint>
+					</mat-form-field>
+				</div>
+				<div class="p-2">
+					<mat-form-field appearance="fill">
+						<mat-label>Category</mat-label>
+						<mat-select name="category" #category="ngModel" [(ngModel)]="dish.category" multiple>
+							<mat-option value="option">Option</mat-option>
+							<mat-option value="option">Option</mat-option>
+						</mat-select>
+					</mat-form-field>
+				</div>
+				<div class="p-2">
+					<mat-form-field appearance="fill">
+						<mat-label>Ingredients</mat-label>
+						<input matInput placeholder="Ingredients">
+						<mat-hint>Hint</mat-hint>
+					</mat-form-field>
+				</div>
+				<div class="p-2">
+					<mat-form-field appearance="fill">
+						<mat-label>Prepare time</mat-label>
+						<input matInput name="prepare_time" #prepare_time="ngModel" [(ngModel)]="dish.prepare_time"
+							type="number" class="example-right-align" placeholder="Time" maxlength="3" min="1"
+							max="500">
+						<span matPrefix>min&nbsp;</span>
+						<span matSuffix>.00</span>
+						<mat-hint>in minute</mat-hint>
+					</mat-form-field>
+				</div>
+				<div class="p-2">
+					<mat-form-field appearance="fill">
+						<mat-label>Cost</mat-label>
+						<input matInput name="cost" #cost="ngModel" [(ngModel)]="dish.cost" type="number"
+							class="example-right-align" placeholder="Cost" maxlength="3" min="1" max="999">
+						<span matPrefix>EG&nbsp;</span>
+						<span matSuffix>.00</span>
+						<mat-hint>EGP pound</mat-hint>
+					</mat-form-field>
+				</div>
+				<div class="p-2">
+					<mat-form-field appearance="fill">
+						<mat-label>Directions</mat-label>
+						<textarea matInput name="directions" #directions="ngModel"
+							[(ngModel)]="dish.directions"></textarea>
+						<mat-hint>Hint</mat-hint>
+					</mat-form-field>
+				</div>
+				<div class="p-2 text-center">
+					<mat-checkbox name="is_available" #is_available="ngModel" [(ngModel)]="dish.is_available">Is
+						Available?</mat-checkbox>
+				</div>
+				<div class="text-center">
+					<button class="btn btn-success shadow" [disabled]="dishForm.invalid" type="submit">Add</button>
+				</div>
+			</form>
+		</div>
+		<div class="col-sm-12 col-md-6 side-img text-center">
+			<div class="data-box mt-2 p-2 align-middle">
+				<div class="model-box">
+					<h2 class="text-dark bg-warning rounded shadow mt-1 h-model" (click)="appear('p-model')">dishModel</h2>
+					<p id="p-model" class="p-1 border rounded p-model">{{ dish | json }}</p>
+				</div>
+				<div class="form-box">
+					<h2 class="text-dark bg-warning rounded shadow mt-1 h-form" (click)="appear('p-form')">dishForm</h2>
+					<p id="p-form" class="p-1 border rounded p-form">{{ dishForm.value | json }}</p>
+				</div>
+				<div class="status-box">
+					<h2 class="rounded shadow mt-1 h-status" [ngClass]="dishForm.status == 'VALID' ? 'text-dark bg-success':'text-white bg-danger'" (click)="appear('p-status')">dishForm Status</h2>
+					<p id="p-status" class="p-1 border rounded p-status">{{ dishForm.status | json }}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

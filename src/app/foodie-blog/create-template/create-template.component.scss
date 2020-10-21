@@ -1,0 +1,123 @@
+.side-img {
+    background: {
+        image: url(../../../assets/img/wii.jpeg);
+        position: center center;
+        size: cover;
+        repeat: no-repeat;
+    }
+
+    ;
+
+    .data-box {
+        color: #fff;
+        justify-content: center;
+        padding: auto;
+
+        hr {
+            background-color: #e4e4e4;
+        }
+
+        h2 {
+            font-size: 1.2em;
+            font-weight: 600;
+            opacity: 0.95;
+            // background-color: rgba($color: yellow, $alpha: 0.92);
+        }
+
+        p {
+            font-size: 1.2em;
+            background-color: rgba($color: #000000, $alpha: 0.58);
+        }
+
+        .model-box {
+
+            .h-model {}
+
+            .p-model {
+                transition: 0.7s;
+
+                visibility: hidden;
+                max-height: 0px;
+                opacity: 0;
+            }
+        }
+
+        .model-box:hover {
+
+            .h-model {}
+
+            .p-model {
+                transition: 1.2s;
+
+                visibility: visible;
+                max-height: 450px;
+                opacity: 1;
+            }
+        }
+
+        .form-box {
+
+            .h-form {}
+
+            .p-form {
+                transition: 0.7s;
+
+                visibility: hidden;
+                max-height: 0px;
+                opacity: 0;
+            }
+        }
+
+        .form-box:hover {
+
+            .h-form {}
+
+            .p-form {
+                transition: 1.2s;
+
+                visibility: visible;
+                max-height: 450px;
+                opacity: 1;
+            }
+        }
+
+        .status-box {
+
+            .h-status {}
+
+            .p-status {
+                transition: 0.7s;
+
+                visibility: hidden;
+                max-height: 0px;
+                opacity: 0;
+            }
+        }
+
+        .status-box:hover {
+
+            .h-status {}
+
+            .p-status {
+                transition: 1.2s;
+
+                visibility: visible;
+                max-height: 450px;
+                opacity: 1;
+            }
+        }
+
+    }
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.appear {
+    transition: 1.2s;
+
+    visibility: visible !important;
+    max-height: 450px !important;
+    opacity: 1 !important;
+}

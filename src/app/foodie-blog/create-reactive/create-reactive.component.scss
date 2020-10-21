@@ -1,0 +1,14 @@
+.side-img{
+	width: 100%;
+	background-color: rgba($color: #000000, $alpha: 0.6);
+	img{
+		width: 100%;
+		height: auto;
+		justify-content: center;
+		vertical-align: middle;
+	}
+}
+
+mat-form-field {
+	width: 100%;
+}

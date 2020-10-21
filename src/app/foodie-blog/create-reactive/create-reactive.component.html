@@ -1,0 +1,70 @@
+<div class="container">
+	<div class="row justify-content-center p-2 m-2 border rounded shadow">
+		<div class="col-sm-12 col-md-6 border-right">
+			<h1 class="p-1 text-center">Add New Dish</h1>
+			<hr>
+			<form action="post">
+				<div class="p-2">
+					<mat-form-field appearance="fill">
+						<mat-label>Dish name</mat-label>
+						<input matInput placeholder="Name" required>
+						<mat-hint>Hint</mat-hint>
+					</mat-form-field>
+				</div>
+				<div class="p-2">
+					<mat-form-field appearance="fill">
+						<mat-label>Category</mat-label>
+						<mat-select>
+							<mat-option value="option">Option</mat-option>
+							<mat-option value="option">Option</mat-option>
+						</mat-select>
+					</mat-form-field>
+				</div>
+				<div class="p-2">
+					<mat-form-field appearance="fill">
+						<mat-label>Ingredients</mat-label>
+						<input matInput placeholder="Ingredients">
+						<mat-hint>Hint</mat-hint>
+					</mat-form-field>
+				</div>
+				<div class="p-2">
+					<mat-form-field appearance="fill">
+						<mat-label>Prepare time</mat-label>
+						<input matInput type="number" placeholder="Time" maxlength="3" min="1" max="500">
+						<span matPrefix>min&nbsp;</span>
+						<mat-hint>in minute</mat-hint>
+					</mat-form-field>
+				</div>
+				<div class="p-2">
+					<mat-form-field appearance="fill">
+						<mat-label>Cost</mat-label>
+						<input matInput type="number" class="example-right-align" placeholder="Cost" maxlength="3"
+							min="1" max="999">
+						<span matPrefix>EG&nbsp;</span>
+						<span matSuffix>.00</span>
+						<mat-hint>EGP pound</mat-hint>
+					</mat-form-field>
+				</div>
+				<div class="p-2">
+					<mat-form-field appearance="fill">
+						<mat-label>Directions</mat-label>
+						<textarea matInput></textarea>
+						<mat-hint>Hint</mat-hint>
+					</mat-form-field>
+				</div>
+				<div class="p-2 text-center">
+					<mat-checkbox>Is Available?</mat-checkbox>
+				</div>
+				<hr>
+				<div class="text-center">
+					<button class="btn btn-success shadow" type="submit">Add</button>
+				</div>
+			</form>
+		</div>
+		<div class="col-sm-12 col-md-6">
+			<div class="side-img rounded">
+				<img src="assets/img/wii.jpeg" alt="wall" class="img-fluid rounded">
+			</div>
+		</div>
+	</div>
+</div>
